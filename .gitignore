@@ -1,0 +1,5 @@
+!.gitignore
+.go/
+data/config-dev.cfg
+out/*
+
