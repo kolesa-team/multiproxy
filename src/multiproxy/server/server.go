@@ -74,6 +74,10 @@ func NewMux() *web.Mux {
 				req.URL.Host = h
 				resp, err := client.Do(req)
 
+				if resp != nil {
+					defer resp.Body.Close()
+				}
+
 				if err == nil {
 					logger.Instance().WithFields(log.Fields{
 						"url":    resp.Request.URL,
