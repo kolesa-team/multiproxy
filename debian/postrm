@@ -8,15 +8,15 @@ fi
 
 case "$1" in
   upgrade)
-    # systemd: start the new version of sdt
+    # systemd: start the new version of multiproxy
     if [ -x /bin/systemctl ]; then
-      systemctl restart sdt.service
+      systemctl restart multiproxy.service
     fi
     ;;
 
   purge)
-    deluser sdt
-	rm -rf /run/sdt
+    deluser multiproxy
+	rm -rf /run/multiproxy
     ;;
 
   remove|failed-upgrade|abort-install|abort-upgrade|disappear)
@@ -30,7 +30,7 @@ esac
 
 # Automatically added by dh_installinit
 if [ "$1" = "purge" ] ; then
-        update-rc.d sdt remove >/dev/null
+        update-rc.d multiproxy remove >/dev/null
 fi
 
 

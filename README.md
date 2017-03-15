@@ -13,7 +13,8 @@ Proxy for duplicating requests to multiple backends in parallel.
     keep_alive = 30
     
     [remote]
-    hosts = 127.0.0.1:8990;127.0.0.1:8991;127.0.0.1:8992
+    hosts = http://127.0.0.1:8990;https://127.0.0.1:8991;http://127.0.0.1:8992
+    backup = https://127.0.0.1:8993
 	
 Graylog section is optional. If present logs are written to Graylog.
 
