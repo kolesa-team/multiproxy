@@ -15,6 +15,7 @@ Proxy for duplicating requests to multiple backends in parallel.
     [remote]
     hosts = http://127.0.0.1:8990;https://127.0.0.1:8991;http://127.0.0.1:8992
     backup = https://127.0.0.1:8993
+    broken_host_offline = 10s
 	
 Graylog section is optional. If present logs are written to Graylog.
 
