@@ -8,6 +8,7 @@ import (
 
 	"./multiproxy/logger"
 	"./multiproxy/server"
+
 	log "github.com/Sirupsen/logrus"
 	"github.com/braintree/manners"
 	"github.com/codegangsta/cli"
@@ -26,7 +27,7 @@ func main() {
 
 	app.Name = "multiproxy"
 	app.Usage = "Proxy for duplicating requests to multiple backends"
-	app.Version = "0.0.2"
+	app.Version = "0.0.3"
 	app.Author = "Igor Borodikhin"
 	app.Email = "iborodikhin@gmail.com"
 	app.Action = actionRun
